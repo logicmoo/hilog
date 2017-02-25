@@ -19,7 +19,7 @@ test(2):- must_det(fail).
 
 test(2):- sanity(fail).
 
-% quietly(:GOAL) - if tracing, temporaily no_trace/1
+% quietly(:GOAL) - if tracing, temporaily quietly/1
 test(2):- rtrace(( trace_me, quietly(dont_trace_me))).
 
 all_tests:- forall(test(_),true).
