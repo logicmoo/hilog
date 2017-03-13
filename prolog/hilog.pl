@@ -4,7 +4,7 @@
 
 :- multifile((system:term_expansion/4,system:term_expansion/2)).
 :- dynamic((system:term_expansion/4,system:term_expansion/2)).
-:- multifile(t_l:disable_px/0).
+
 :- thread_local(t_l:disable_px/0).
 
 :- dynamic((var_functor_quote/1,was_allow_variable_name_as_functor/1, var_functor_wrap/1)).
