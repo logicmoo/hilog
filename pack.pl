@@ -1,7 +1,7 @@
 name(hilog).
 title('XSB-Prolog''s Hilog Syntax in SWI-Prolog').
 
-version('1.1.117').
+version('1.1.118').
 download('https://github.com/TeamSPoon/hilog/releases/*.zip').
 
 author( 'Douglas R. Miles', 'logicmoo@gmail.com' ).
