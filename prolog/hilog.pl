@@ -28,7 +28,7 @@ expand_var_functors(T,VFE,Outer,In,Out):-
 system:term_expansion(I,O):- var_functor_wrap(T),
           compound(I),functor(I,VFE,_), % var_functor_quote(VFE),
                      \+ t_l:disable_px,
-                       must((locally(t_l:disable_px,expand_var_functors(T,VFE,(:-),I,O)))),I\=@=O.
+                       must((locally_tl(disable_px,expand_var_functors(T,VFE,(:-),I,O)))),I\=@=O.
 
 system:goal_expansion(I,O):- var_functor_wrap(T),
           compound(I),functor(I,VFE,_), % var_functor_quote(VFE),
@@ -71,7 +71,7 @@ expand_var_functors(T,VFE,Outer,In,Out):-
 system:term_expansion(I,O):- current_prolog_flag(allow_variable_name_as_functor,true),
           compound(I),functor(I,VFE,1),var_functor_quote(VFE),
                      \+ t_l:disable_px,
-                       locally(t_l:disable_px,expand_var_functors(T,VFE,(:-),I,O)),I\=@=O.
+                       locally_tl(disable_px,expand_var_functors(T,VFE,(:-),I,O)),I\=@=O.
 
 system:goal_expansion(I,O):- current_prolog_flag(allow_variable_name_as_functor,true),
      compound(I),functor(I,VFE,1),var_functor_quote(VFE),
